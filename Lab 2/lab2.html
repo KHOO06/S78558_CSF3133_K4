@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Page</title>
+</head>
+<body>
 
+    <header>
+        <h1>My Personal Profile</h1>
+    </header>
+
+    <nav>
+        <a href="#about-me">About Me</a> | 
+        <a href="#contact-form">Contact Form</a>
+    </nav>
+
+    <hr>
+
+    <section>
+
+        <article id="about-me">
+            <h2>Personal Information</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Occupation</th>
+                </tr>
+                <tr>
+                    <td>Alex Tan</td>
+                    <td>21</td>
+                    <td>Student</td>
+                </tr>
+                <tr>
+                    <td>Sarah Lee</td>
+                    <td>23</td>
+                    <td>Designer</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>25</td>
+                    <td>Developer</td>
+                </tr>
+            </table>
+        </article>
+
+        <br><hr><br>
+
+        <article id="contact-form">
+            <h2>User Information Form</h2>
+
+            <form action="submit_form.php" method="post">
+                
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+
+                <label>Favorite Hobbies:</label><br>
+                <input type="checkbox" id="reading" name="hobby" value="reading">
+                <label for="reading">Reading</label>
+                <input type="checkbox" id="gaming" name="hobby" value="gaming">
+                <label for="gaming">Gaming</label>
+                <input type="checkbox" id="sports" name="hobby" value="sports">
+                <label for="sports">Sports</label><br><br>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </article>
+
+    </section>
+
+    <br><hr><br>
+
+    <footer>
+        <p>&copy; 2026 My Personal Profile Page. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
