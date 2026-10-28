@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Event Page - Programming Workshop 2026</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Programming Workshop 2026</h1>
+        <p>Enhance your coding skills and build exciting software projects!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About the Event</a> | 
+        <a href="#schedule">Event Schedule</a> | 
+        <a href="#register">Registration</a>
+    </nav>
+
+    <hr>
+
+    <!-- Main Content Section -->
+    <main>
+        
+        <section id="about">
+            <h2>About the Event</h2>
+            
+            <article>
+                <h3>Speaker: Dr. Wan Nural Jawahir</h3>
+                <p>Dr. Wan Nural Jawahir is a leading researcher in Artificial Intelligence and will give an insightful keynote session on modern algorithm design.</p>
+            </article>
+
+            <article>
+                <h3>Activity: Hands-on Web Development</h3>
+                <p>Learn how to structure, design, and deploy your first web application from scratch using modern web technologies.</p>
+            </article>
+        </section>
+
+        <br><hr><br>
+
+        <!-- Event Schedule Table -->
+        <section id="schedule">
+            <h2>Event Schedule</h2>
+            <table border="1">
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+                <tr>
+                    <td>09:00 AM - 10:00 AM</td>
+                    <td>Opening Ceremony & Keynote</td>
+                
+                    <td rowspan="2">Dewan Syed Jalaluddin</td>
+                    <td>Dr. Wan Nural Jawahir</td>
+                </tr>
+                <tr>
+                    <td>10:00 AM - 11:30 AM</td>
+                    <td>Web Development Workshop</td>
+                    <td>Prof. Aizzat</td>
+                </tr>
+                <tr>
+                    <td>11:30 AM - 01:00 PM</td>
+                    <td>Python Masterclass</td>
+                    <td>BYOD 1</td>
+                    <td>Mr. Arizal</td>
+                </tr>
+                <tr>
+                    <td>01:00 PM - 02:00 PM</td>
+                    <td colspan="3">Lunch Break & Bonding</td>
+                </tr>
+                <tr>
+                    <td>02:00 PM - 03:30 PM</td>
+                    <td>Hackathon Session</td>
+                    <td>BYOD 2</td>
+                    <td>Dr. Nurul</td>
+                </tr>
+                <tr>
+                    <td>03:30 PM - 05:00 PM</td>
+                    <td>Closing & Award Presentation</td>
+                    <td>Dewan Syed Jalaluddin</td>
+                    <td>Committee</td>
+                </tr>
+            </table>
+        </section>
+
+        <br><hr><br>
+
+        <!-- Registration Form -->
+        <section id="register">
+            <h2>Student Registration Form</h2>
+            <form action="register.html" method="post">
+                
+                <p>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </p>
+
+                <p>
+                    <label for="matric">Matric Number:</label><br>
+                    <input type="text" id="matric" name="matric" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail Address:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label>Year of Study:</label><br>
+                    <input type="radio" id="year1" name="year_of_study" value="Year 1" required>
+                    <label for="year1">Year 1</label><br>
+                    <input type="radio" id="year2" name="year_of_study" value="Year 2">
+                    <label for="year2">Year 2</label><br>
+                    <input type="radio" id="year3" name="year_of_study" value="Year 3">
+                    <label for="year3">Year 3</label><br>
+                    <input type="radio" id="year4" name="year_of_study" value="Year 4">
+                    <label for="year4">Year 4</label>
+                </p>
+
+                <p>
+                    <label>Select Sessions to Join (At least 1):</label><br>
+                    <input type="checkbox" id="session1" name="sessions" value="Web Development">
+                    <label for="session1">Web Development Workshop</label><br>
+                    <input type="checkbox" id="session2" name="sessions" value="Python Masterclass">
+                    <label for="session2">Python Masterclass</label><br>
+                    <input type="checkbox" id="session3" name="sessions" value="Hackathon">
+                    <label for="session3">Hackathon Session</label>
+                </p>
+
+                <p>
+                    <label for="programme">Programme / Faculty:</label><br>
+                    <select id="programme" name="programme" required>
+                        <option value="">-- Select Programme --</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="Applied Math">Applied Math</option>
+                        <option value="Financial Math">Financial Math</option>
+                    </select>
+                </p>
+
+                <!-- Submit Button -->
+                <p>
+                    <input type="submit" value="Register Now">
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <br><hr><br>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Organised by Faculty of Computing & Information Technology</p>
+        <p>&copy; 2026 Programming Workshop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
