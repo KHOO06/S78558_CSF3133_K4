@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Bakery Online Order Page</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>CampusBake&reg; <span>- Freshly Baked Everyday</span></h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <div id="nav">
+        <a href="#home">Home</a> | 
+        <a href="#menu">Menu</a> | 
+        <a href="#order">Order Online</a>
+    </div>
+
+    <!-- Sidebar Section (Price List & Entities) -->
+    <div id="sidebar">
+        <h2>Price List &amp; Offers</h2>
+        <ul>
+            <li>Cupcake: RM 3.00 each</li>
+            <li>Cake Slice: RM 5.00 each</li>
+            <li>Special Offer: Orders &gt; 10 pieces get a free drink!</li>
+            <li>International Menu Price: &pound;2.50 or &euro;3.00 per set</li>
+        </ul>
+    </div>
+
+    <!-- Content Section -->
+    <div id="content">
+        <h2>Welcome to Our Bakery</h2>
+        <p>
+            We provide <strong>delicious</strong>, <em>freshly baked</em> pastries daily. 
+            Check out our <a href="#sidebar">price list</a> or use <span>our form below</span> to place your pre-order!
+        </p>
+
+        <!-- Order Form (HTML5 Form Elements & Price Calculator) -->
+        <div id="order">
+            <h3>Pre-Order Form</h3>
+            <form oninput="total.value = parseInt(cupcakes.value || 0) * 3 + parseInt(cakes.value || 0) * 5">
+                <!-- Customer Name -->
+                <label for="cname">Customer Name:</label><br>
+                <input type="text" id="cname" name="cname" placeholder="Enter your full name" autofocus required>
+                <br><br>
+
+                <!-- Phone Number -->
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="012-3456789" required>
+                <br><br>
+
+                <!-- Email -->
+                <label for="email">E-mail Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                <br><br>
+
+                <!-- Pick-up Date & Time -->
+                <label for="pickdate">Pick-up Date:</label><br>
+                <input type="date" id="pickdate" name="pickdate">
+                <br><br>
+
+                <label for="picktime">Pick-up Time:</label><br>
+                <input type="time" id="picktime" name="picktime">
+                <br><br>
+
+                <!-- Flavour with datalist -->
+                <label for="flavour">Flavour:</label><br>
+                <input type="text" id="flavour" name="flavour" list="flavours" placeholder="Choose or type a flavour">
+                <datalist id="flavours">
+                    <option value="Chocolate">
+                    <option value="Vanilla">
+                    <option value="Strawberry">
+                    <option value="Red Velvet">
+                </datalist>
+                <br><br>
+
+                <!-- Icing Color -->
+                <label for="icing">Icing Colour:</label><br>
+                <input type="color" id="icing" name="icing" value="#ffc0cb">
+                <br><br>
+
+                <!-- Sweetness Level (Range Slider) -->
+                <label for="sweetness">Sweetness Level (1 to 5):</label><br>
+                <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1" value="3">
+                <br><br>
+
+                <!-- Price Calculator Inputs (<output>) -->
+                <h4>Item Selection &amp; Price Calculation</h4>
+                <label for="cupcakes">Cupcakes (RM 3.00 each):</label><br>
+                <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+                <br><br>
+
+                <label for="cakes">Cake Slices (RM 5.00 each):</label><br>
+                <input type="number" id="cakes" name="cakes" min="0" value="0">
+                <br><br>
+
+                <strong>Total Price: RM </strong>
+                <output name="total" for="cupcakes cakes">0</output>
+                <br><br>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit Order">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <p>CampusBake&reg; &nbsp;&nbsp; All Rights Reserved &copy; 2026</p>
+    </div>
+
+</body>
+</html>
+
+
