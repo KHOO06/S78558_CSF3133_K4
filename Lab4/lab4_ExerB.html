@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+
+    <link rel="stylesheet" href="cafe.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .intro {
+            font-size: 18px;
+            background-color: #FDEBD0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #C0392B;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+    Part 1 Debugging Error List:
+    - Error 1 (Line 9): 'list-style-type: no;' is incorrect. Changed to 'none'.
+    - Error 2 (Line 14-15): 'a:hover' was placed before 'a:visited'. Fixed LVHA order (link -> visited -> hover -> active).
+    - Error 3 (Line 17): 'text-decoration: overlined;' is incorrect. Changed to 'overline'.
+    - Error 4 (Line 19): '#intro' was an ID selector, but HTML used 'class="intro"'. Changed to '.intro'.
+    - Error 5 (Line 22): 'highlight' was missing the dot prefix. Changed to '.highlight'.
+    - Error 6 (Line 34): '<a href="menu">' was missing '#'. Changed to '<a href="#menu">'.
+    - Error 7 (Line 42, 46): Duplicate 'id="item"' used on multiple articles. Changed to 'class="item"'.
+    - Error 8 (Line 53): '<video>' tag was missing the 'controls' attribute.
+    -->
+
+    <!-- Header -->
+    <header>
+        <h1>e-Café Campus</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section 1: Menu -->
+    <section id="menu">
+        <h2>Today's Menu</h2>
+        <p class="intro">Freshly brewed coffee and local delights every day.</p>
+
+        <!-- Article 1: Kopi Tarik -->
+        <article class="item">
+            <h3>Kopi Tarik</h3>
+            <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+        </article>
+
+        <!-- Article 2: Nasi Lemak -->
+        <article class="item">
+            <h3>Nasi Lemak</h3>
+            <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+        </article>
+    </section>
+
+    <!-- Section 2: Video -->
+    <section id="video">
+        <h2>Watch Our Story</h2>
+        <figure>
+            <video width="400" height="300" controls>
+                <source src="cafe.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption class="caption">Take a look inside our campus e-Café daily operations.</figcaption>
+        </figure>
+    </section>
+
+    <!-- Section 3: Feedback -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <form action="#" method="post" class="feedback-form">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" name="fname" required placeholder="Your name">
+            </div>
+
+            <!-- E-mail -->
+            <div class="form-group">
+                <label for="femail">E-mail:</label>
+                <input type="email" id="femail" name="femail" required placeholder="Your email">
+            </div>
+
+            <!-- Visit Type (Radio Buttons) -->
+            <div class="form-group">
+                <label>Visit Type:</label>
+                <div class="options-group">
+                    <label><input type="radio" name="visit_type" value="Dine-in" required> Dine-in</label>
+                    <label><input type="radio" name="visit_type" value="Take-away"> Take-away</label>
+                </div>
+            </div>
+
+            <!-- Favourite Items (Checkboxes) -->
+            <div class="form-group">
+                <label>Favourite Items:</label>
+                <div class="options-group">
+                    <label><input type="checkbox" name="fav_item" value="Coffee"> Coffee</label>
+                    <label><input type="checkbox" name="fav_item" value="Nasi Lemak"> Nasi Lemak</label>
+                    <label><input type="checkbox" name="fav_item" value="Pastries"> Pastries</label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus. All rights reserved.</p>
+        <address>
+            Contact us: <a href="mailto:ecafe@campus.edu.my">ecafe@campus.edu.my</a>
+        </address>
+    </footer>
+
+</body>
+</html>
