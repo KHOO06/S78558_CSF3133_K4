@@ -1,0 +1,108 @@
+/* General page styling matching Problem A's centered layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Top banner styling for the page title */
+h2 {
+    background-color: #1b4965;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+}
+
+/* Centered wide card container for the form */
+form {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Wider text inputs inside the centered card */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Button styling with pointer cursor and hover transition */
+button {
+    padding: 8px 16px;
+    background-color: #2b7bba;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+button:hover {
+    background-color: #1b4965;
+}
+
+/* Centered layout for result text, timestamp, Show Grade Table button, and table container */
+#result,
+#checkedTime,
+body > button,
+#tableContainer {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#result {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+#checkedTime {
+    font-weight: bold;
+    color: green;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Full-width grade table inside the 800px centered container */
+table {
+    border-collapse: collapse;
+    margin-top: 15px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #1b4965;
+    color: white;
+}
+

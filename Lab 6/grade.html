@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
+
+    <!-- Fix Error 1 (Line 9): Added 'return' so returning false prevents page reload -->
+    <form name="gradeForm" onsubmit="return checkMark()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="mark">Mark (0-100):</label><br>
+        <input type="text" id="mark" name="mark"><br>
+
+        <button type="submit">Check Grade</button>
+        <!-- Add Random Mark button -->
+        <button type="button" onclick="generateRandomMark()">Random Mark</button>
+    </form>
+
+    <!-- Display grade result and checked timestamp -->
+    <p id="result"></p>
+    <!-- Part 2 (Step 8): Paragraph to display checked date and time -->
+    <p id="checkedTime"></p>
+
+    <!-- Fix Error 2 (Line 17): Corrected function name casing to showTable() -->
+    <button onclick="showTable()">Show Grade Table</button>
+    <div id="tableContainer"></div>
+
+    <!-- Fix Error 3 (Line 19): Corrected script filename from grades.js to grade.js -->
+    <script src="grade.js"></script>
+</body>
+</html>

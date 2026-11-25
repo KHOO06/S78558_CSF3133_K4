@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development Quiz Application</title>
+    <!-- Link external CSS stylesheet -->
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+
+    <!-- Header introducing the quiz -->
+    <header>
+        <h1>JavaScript &amp; Web Dev Quiz</h1>
+        <p>Test your knowledge! Answer each question before the 15-second timer runs out.</p>
+    </header>
+
+    <main>
+        <!-- Start screen before quiz begins -->
+        <section id="startSection" class="card center-box">
+            <h2>Ready to Start?</h2>
+            <p>Questions are shuffled randomly for every attempt.</p>
+            <button id="startBtn" onclick="startQuiz()">Start Quiz</button>
+        </section>
+
+        <!-- Quiz section: timer, question, options, feedback, and navigation -->
+        <section id="quizSection" class="card hidden">
+            <div class="quiz-top-bar">
+                <span id="questionCounter">Question 1 of 5</span>
+                <span class="timer-box">Time Left: <span id="timer">15</span>s</span>
+            </div>
+
+            <!-- Question and options container -->
+            <h2 id="questionText">Question goes here</h2>
+            <div id="optionsContainer" class="options-list"></div>
+
+            <!-- Feedback section (correct / incorrect / time's up) -->
+            <p id="feedback" class="feedback-msg"></p>
+
+            <!-- Submit and navigation buttons -->
+            <div class="nav-buttons">
+                <button id="submitBtn" onclick="checkAnswer()">Submit Answer</button>
+                <button id="nextBtn" onclick="nextQuestion()" class="hidden">Next Question</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer displaying final score after finishing the quiz -->
+    <footer id="scoreFooter" class="card center-box hidden">
+        <h2>Quiz Completed!</h2>
+        <p id="finalScoreText"></p>
+        <button onclick="startQuiz()">Restart Quiz</button>
+    </footer>
+
+    <!-- Link external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
